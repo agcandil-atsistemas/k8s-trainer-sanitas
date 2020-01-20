@@ -2,11 +2,7 @@
 
 ## Day One: Introduction to Kubernetes 
 
-## Day Two: Prepare Environment
-
-* ### [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-
-* ### [Kubernetes - Installing with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+## [Day Two: Prepare Environment](Day_02.md)
 
 ## [Kubernetes - official tasks](https://kubernetes.io/docs/tasks/)
 
