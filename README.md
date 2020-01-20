@@ -4,7 +4,7 @@
 
 ## Day Two: Prepare Environment
 
-* ### [Install and Set Up kubectl](ttps://kubernetes.io/docs/tasks/tools/install-kubectl/)
+* ### [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 * ### [Kubernetes - Installing with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
