@@ -4,20 +4,129 @@
 
 ## [Kubernetes - Installing with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
+```[bash]
+vagrant ssh master1
+sudo su -
+apt-get update -y
+```
+
+```[bash]
+# ensure legacy binaries are installed
+sudo apt-get install -y iptables arptables ebtables
+
+# switch to legacy versions
+sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+sudo update-alternatives --set arptables /usr/sbin/arptables-legacy
+sudo update-alternatives --set ebtables /usr/sbin/ebtables-legacy
+```
+
+### Install containerd + cri-utils
+
+```[bash]
+cat > /etc/modules-load.d/containerd.conf <<EOF
+overlay
+br_netfilter
+EOF
+
+modprobe overlay
+modprobe br_netfilter
+
+# Setup required sysctl params, these persist across reboots.
+cat > /etc/sysctl.d/99-kubernetes-cri.conf <<EOF
+net.bridge.bridge-nf-call-iptables  = 1
+net.ipv4.ip_forward                 = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+EOF
+
+sysctl --system
+
+
+sudo sh -c "curl -LSs https://storage.googleapis.com/cri-containerd-release/cri-containerd-cni-1.3.2.linux-amd64.tar.gz |tar --no-overwrite-dir -C / -xz"
+crictl info
+
+sudo systemctl enable --now containerd
+crictl info
+```
+
+### Install kubelet kubeadm kubectl
+
+```[bash]
+sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+```
+
+### corregir ips
+
+```[bash]
+
+cat <<EOF >  /etc/default/kubelet
+KUBELET_EXTRA_ARGS=--node-ip=192.168.88.11
+EOF
+
+cat <<EOF >  /etc/default/kubelet
+KUBELET_EXTRA_ARGS=--node-ip=192.168.88.31
+EOF
+
+cat <<EOF >  /etc/default/kubelet
+KUBELET_EXTRA_ARGS=--node-ip=192.168.88.32
+EOF
+``` 
+
+### kubeadm init (master)
+
+```[bash]
+sudo kubeadm init --apiserver-advertise-address=192.168.88.11 --pod-network-cidr=10.244.0.0/16 --cri-socket /run/containerd/containerd.sock 
+```
+
+### kubeadm join (node)
+
+```[bash]
+kubeadm join 192.168.88.11:6443 --token qvmyxp.ty0snqyhfmbvlssd \
+    --discovery-token-ca-cert-hash sha256:4ae740ec0ab0d6206efbd4917eb9d5e7cfdb3139ec2b7b6882b6ac0d60dfc725 
+```
+
+### [Token management](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-token/)
+
 ## [Install CNI: flannel](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
+
+```[bash] 
+kubectl apply -f https://raw.githubusercontent.com/agcandil-atsistemas/k8s-trainer-sanitas/master/flannel/kube-flannel.yml
+```
 
 ## [Install Web UI (Dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
 Deploy and access the Dashboard web user interface to help you manage and monitor containerized applications in a Kubernetes cluster.
 
 ```[bash]
-$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
-$ kubectl proxy
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
+
+kubectl proxy
 ```
 
-## [Install Metric Server](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/)
+[Link Console UI](http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/)
 
+To get Bearer Token:
 
+```[bash]
+$ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | awk '/^deployment-controller-token-/{print $1}') | awk '$1=="token:"{print $2}'
+```
+
+### [Create Sample User](https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md)
+
+```[bash]
+kubectl apply -f dashboard/
+
+kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+
+```
 ## Using the kubectl Command-line
 
 Install and setup the kubectl command-line tool used to directly manage Kubernetes clusters.
