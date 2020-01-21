@@ -4,6 +4,8 @@
 
 ## [Kubernetes - Installing with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
+## [Install CNI: flannel](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
+
 ## [Install Web UI (Dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
 Deploy and access the Dashboard web user interface to help you manage and monitor containerized applications in a Kubernetes cluster.
@@ -12,8 +14,6 @@ Deploy and access the Dashboard web user interface to help you manage and monito
 $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
 $ kubectl proxy
 ```
-
-## [Install CNI: flannel](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
 
 ## [Install Metric Server](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/)
 
