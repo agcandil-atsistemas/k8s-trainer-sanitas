@@ -4,6 +4,9 @@
 
 ## [Day Two: Prepare Environment](Day_02.md)
 
+## [Day Three: Prepare Environment](Day_03.md)
+
+
 ## [Kubernetes - official tasks](https://kubernetes.io/docs/tasks/)
 
 ---------------------------
