@@ -4,7 +4,9 @@
 
 ## [Day Two: Prepare Environment](Day_02.md)
 
-## [Day Three: Prepare Environment](Day_03.md)
+## [Day Three: Workloads](Day_03.md)
+
+## [Day Four: Statefull Apps](Day_04.md)
 
 
 ## [Kubernetes - official tasks](https://kubernetes.io/docs/tasks/)

@@ -10,13 +10,21 @@ Perform common configuration tasks for Pods and Containers.
 
 ### [Assign Memory Resources to Containers and Pods](https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/)
 
+    -- look at --
+
 ### [Assign CPU Resources to Containers and Pods](https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/)
 
+    -- look at --
+
 ### [Configure Quality of Service for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
+
+    -- look at --
 
 ### [Assign Extended Resources to a Container](https://kubernetes.io/docs/tasks/configure-pod-container/extended-resource/)
 
 ### [Configure a Pod to Use a Volume for Storage](https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/)
+
+    -- look at --
 
 ### [Configure a Pod to Use a PersistentVolume for Storage](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/)
 
@@ -24,14 +32,23 @@ Perform common configuration tasks for Pods and Containers.
 
 ### [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 
+    -- look at --
+
 ### [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
+    -- look at --
+
 ### [Pull an Image from a Private Registry](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)   
+
     -- Only read and understand --
 
 ### [Configure Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
+    -- look at --
+
 ### [Assign Pods to Nodes](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/)
+
+    -- look at --
 
 ### [Configure Pod Initialization](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/)
 
@@ -45,6 +62,8 @@ Perform common configuration tasks for Pods and Containers.
 
 ### [Create static Pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)
 
-### [Translate a Docker Compose File to Kubernetes Resources](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) 
-           -- Only read and understand --
+    -- look at --
 
+### [Translate a Docker Compose File to Kubernetes Resources](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) 
+
+           -- Only read and understand --
