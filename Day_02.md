@@ -100,6 +100,18 @@ kubeadm join 192.168.88.11:6443 --token qvmyxp.ty0snqyhfmbvlssd \
 kubectl apply -f https://raw.githubusercontent.com/agcandil-atsistemas/k8s-trainer-sanitas/master/flannel/kube-flannel.yml
 ```
 
+### Network Links
+
+* [Network layers OSI](https://miro.medium.com/max/1024/1*17Zz6v0HWIzgiOzQYmO6lA.jpeg)
+* [Kubernetes Doc](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
+* [Kubernetes Network Proposals](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/network/networking.md)
+* [Kubernetes Service Topology](https://kubernetes.io/docs/concepts/services-networking/service-topology/)
+* [Kubernetes Service networking](https://kubernetes.io/docs/concepts/services-networking/service/)
+* [sookocheff understanding-kubernetes-networking-model](https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/)
+* [Cilium examples](https://medium.com/kubernetes-tutorials/advanced-network-rules-configuration-in-kubernetes-with-cilium-341c31d6cd2f)
+* [calico routing modes](https://octetz.com/docs/2020/2020-10-01-calico-routing-modes/)
+
+
 ## [Install Web UI (Dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
 Deploy and access the Dashboard web user interface to help you manage and monitor containerized applications in a Kubernetes cluster.
