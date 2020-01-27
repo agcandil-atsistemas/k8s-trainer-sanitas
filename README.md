@@ -6,7 +6,10 @@
 
 ## [Day Three: Workloads](Day_03.md)
 
-## [Day Four: Statefull Apps](Day_04.md)
+## [Day Four and five: Statefull Apps](Day_04_05.md)
+
+## [Day Six: Admin](Day_06.md)
+
 
 
 ## [Kubernetes - official tasks](https://kubernetes.io/docs/tasks/)
