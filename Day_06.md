@@ -31,7 +31,10 @@ Tips:
 
 ### Read More:
 
-* [Out of resources](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/)
+* https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/
+* https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/
+* https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/
+
 
 
 ## Install Nginx Ingress Controller
@@ -40,6 +43,12 @@ To test it, publish ingress with Dashboard.
 
 Tips:
 * https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal
+* https://kubernetes.io/docs/concepts/services-networking/ingress/
+* https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
+
+### Read More:
+* https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
+* https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/
 
 ## Exercise Cluster Upgrade
 
