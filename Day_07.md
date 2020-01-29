@@ -21,6 +21,10 @@ Tips:
 * Controlling the capabilities of a workload or user at runtime
 * Protecting cluster components from compromise
 
+### Use Transport Layer Security (TLS) for all API traffic
+
+* [certs management](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/)
+
 ### [Authentication](https://kubernetes.io/docs/reference/access-authn-authz/authentication/)
 
 * [Manage Service Accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/)

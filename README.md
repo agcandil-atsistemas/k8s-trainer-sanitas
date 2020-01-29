@@ -10,7 +10,9 @@
 
 ## [Day Six: Admin](Day_06.md)
 
+## [Day Seven: Admin](Day_07.md)
 
+## [Day Eight: Admin](Day_08.md)
 
 ## [Kubernetes - official tasks](https://kubernetes.io/docs/tasks/)
 
