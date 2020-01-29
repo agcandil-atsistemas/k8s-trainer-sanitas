@@ -50,11 +50,7 @@ Tips:
 * https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
 * https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/
 
-## Exercise Cluster Upgrade
 
-Tips: 
-* Install new Cluster **versión 1.16**: More Info [Day_02](Day_02.md)
-* [Execute kubeadm Upgrade Process](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
 
 
 
