@@ -36,3 +36,12 @@
 * Cluster Daemons
 * Managing GPUs
 * Managing HugePages
+
+---------------------------
+
+## CKA Details:
+
+* https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
+* https://www.cncf.io/certification/cka/
+* https://training.linuxfoundation.org/wp-content/uploads/2019/11/CKA-CKAD-Candidate-Handbook-v1.6.pdf
+* https://github.com/cncf/presentations/tree/master/kubernetes
